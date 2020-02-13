@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+		function calculate()
+		{
+			
+			var str = document.getElementById('p').value;
+			
+			
+			var result = checkPalindrome(str);
+			alert('The Entered String "'+str +'" is "'+result+'"');
+		}
+		
+		function checkPalindrome(str)
+		{
+			var orignalStr;
+			 
+			
+			str = str.toLowerCase();
+			
+			
+			orignalStr = str;
+			
+			
+			str = str.split('');  
+			str = str.reverse();  
+			str = str.join(''); 
+			
+			var reverseStr = str;
+					
+			if(orignalStr == reverseStr){
+				return 'Palindrome'; 
+			}else{
+				return 'Not Palindrome';
+			}
+		}
+</script>
+</head>
+<body>
+
+
+
+ Enter String:<input id="p"><br/>
+    
+  <button onclick="calculate()">Calculate</button>
+  
+<p id="result"></p>
+
+
+
+</body>
+</html>

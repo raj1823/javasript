@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ques 4</title>
+  </head>
+  <body onload="copyf()">
+      <h2>Ques 4. Copy information of one object to another object and display in console</h2>
+      <script>
+
+function copyf() {
+    var obj1={name:"Raj" ,age: 21};
+    var obj2={};
+     for(i in obj1)
+     	{
+     	 obj2[i]=obj1[i];
+     	}	
+     console.log(obj1);
+     console.log(obj2);
+}
+    </script>
+  </body>
+</html>
+
+

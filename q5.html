@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Question 5</title>
+  <body onload="employee()">
+    <h2>Question 5</h2>
+<script>
+   function employee()
+     {   
+            var emp=[{name:"Raj",age:21 ,salary:"2500",DOB:"12/02/1998"},
+            {name:"Ridfds",age:21,salary:"4200",DOB:"10/02/2014"},
+            {name:"Shcsa",age:17,salary:"7000",DOB:"11/01/1998"},
+            {name:"Vikcd",age:17,salary:"350",DOB:"7/07/1995"},
+            {name:"Tarcdn",age:24 ,salary:"5000",DOB:"11/04/1995"},
+            {name:"Ravixs",age:23 ,salary:"500",DOB:"19/12/1996"}];
+
+
+console.log("[b.]Filter all employees with salary greater than 5000.");
+
+        emp.filter(function(empl){
+            if(empl.salary > 5000)
+                {
+                    console.log(empl);  
+                }
+             
+        });
+
+console.log("[c.]Group employee on the basis of their age.");
+        function groupBy(emp, s) {
+    var i = 0, val, index,
+        values = [], result = [];
+    for (; i < emp.length; i++) {
+        val = emp[i][s];
+        index = values.indexOf(val);
+        if (index > -1)
+            result[index].push(emp[i]);
+        else {
+            values.push(val);
+            result.push([emp[i]]);
+        }
+    }
+    return result;
+}
+
+var obj = groupBy(emp, "age");
+
+               console.log(obj);
+             
+        
+console.log("[d.]Fetch employees with salary less than 1000 and age greater than 20. Then give them an increment 5 times their salary.");
+       var x=[];
+        emp.filter(function(empl){
+            if(empl.salary < 1000 && empl.age>20)
+                {   empl.salary *= 5;
+                    x=empl;
+                   
+                }
+             
+        });
+
+        console.log(emp);
+
+
+
+    }
+</script>
+</body>
+</html>
+
